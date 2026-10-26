@@ -1,0 +1,27 @@
+{
+  "mcpServers": {
+    "hashkey-mev-shield-ai": {
+      "command": "cargo",
+      "args": [
+        "run",
+        "--release",
+        "--quiet"
+      ],
+      "env": {
+        "RUST_LOG": "info",
+        "HACKATHON_TRACK": "HashKey Chain",
+        "PROJECT_TICKER": "HKSHIELD"
+      },
+      "tools": [
+        {
+          "name": "verify_hkshield_invariants",
+          "description": "Verifies deterministic invariants for HashKey MEV Shield AI on HashKey Chain."
+        },
+        {
+          "name": "execute_hkshield_action",
+          "description": "Executes authenticated Security state transition."
+        }
+      ]
+    }
+  }
+}
